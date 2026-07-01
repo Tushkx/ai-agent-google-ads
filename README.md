@@ -24,7 +24,8 @@ Instead of manually reviewing Google Ads campaigns every day, this agent automat
 
 ## ⚙️ Architecture
 
- Google Ads API
+ ```text
+Google Ads API
         │
         ▼
 n8n / Make Scheduler
@@ -42,6 +43,7 @@ AI Decision Engine
         │
         ▼
 Streamlit Dashboard
+```
 
 ## ⚙️ Workflow
 
