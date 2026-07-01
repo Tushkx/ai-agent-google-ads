@@ -1,8 +1,69 @@
 # Google Ads AI Agent
 
-White-label autonomous Google Ads manager. **No manual CSV uploads** — data flows from **Google Ads API** via **n8n** or **Make** on a schedule you define (every 1h, 6h, 12h, or daily). The agent detects waste, scales winners, enforces a daily budget cap, and surfaces results in a dark-mode dashboard.
+An autonomous AI-powered Google Ads optimization agent that continuously monitors campaign performance, identifies optimization opportunities, recommends scaling or pausing campaigns, and provides a complete decision log for human review.
+
+> **Status:** Portfolio project demonstrating AI-powered marketing automation using Python, FastAPI, Streamlit, n8n and Google Ads data.
+
+---
+
+## Overview
+
+Instead of manually reviewing Google Ads campaigns every day, this agent automatically:
+
+- imports campaign performance data
+- evaluates predefined business rules
+- detects inefficient campaigns
+- recommends scaling successful campaigns
+- tracks decision history
+- displays everything in a Streamlit dashboard
+- supports human approval before execution
+
+---
+
+## ⚙️ Architecture
+
+  Google Ads API
+│
+▼
+n8n / Make Scheduler
+│
+▼
+FastAPI Webhook
+│
+▼
+AI Decision Engine
+│
+├── Budget Control
+├── Recommendation Engine
+├── Decision Log
+└── Slack Notifications
+│
+▼
+Streamlit Dashboard
 
 ## How it works
+## ⚙️ Workflow
+
+```text
+n8n / Make (Schedule)
+        │
+        ▼
+Google Ads API
+        │
+        ▼
+POST /webhook/run
+        │
+        ▼
+AI Agent analyzes campaigns
+        │
+        ▼
+Stores latest snapshot
+        │
+        ▼
+Streamlit Dashboard
+        │
+        ▼
+(Optional) Slack Notification
 
 ```
 n8n / Make (Schedule)
@@ -163,24 +224,6 @@ google-ads-ai-agent/
 | ≥ 20 clicks, ≥ 4% CR | **Scale up** |
 | High CPC, low CR | Reduce bid |
 | Otherwise | Hold |
-
-## Deploy to GitHub
-
-1. Create a new repo on GitHub
-2. Push this project:
-
-```bash
-cd google-ads-ai-agent
-git init
-git add .
-git commit -m "Initial commit: Google Ads AI Agent"
-git remote add origin https://github.com/YOUR_USER/google-ads-ai-agent.git
-git push -u origin main
-```
-
-3. Deploy API to Railway / Render / Fly.io
-4. Set env vars from `.env.example`
-5. Point n8n/Make webhook to `https://your-api/webhook/run`
 
 ## License
 
