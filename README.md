@@ -8,6 +8,8 @@ An autonomous AI-powered Google Ads optimization agent that continuously monitor
 
 ## Overview
 
+**Business value:** Reduces repetitive manual campaign reviews by automatically identifying optimization opportunities while keeping the final decision under human control.
+
 Instead of manually reviewing Google Ads campaigns every day, this agent automatically:
 
 - imports campaign performance data
@@ -22,26 +24,25 @@ Instead of manually reviewing Google Ads campaigns every day, this agent automat
 
 ## ⚙️ Architecture
 
-  Google Ads API
-│
-▼
+ Google Ads API
+        │
+        ▼
 n8n / Make Scheduler
-│
-▼
+        │
+        ▼
 FastAPI Webhook
-│
-▼
+        │
+        ▼
 AI Decision Engine
-│
-├── Budget Control
-├── Recommendation Engine
-├── Decision Log
-└── Slack Notifications
-│
-▼
+        │
+        ├── Budget Control
+        ├── Recommendation Engine
+        ├── Decision Log
+        └── Slack Notifications
+        │
+        ▼
 Streamlit Dashboard
 
-## How it works
 ## ⚙️ Workflow
 
 ```text
@@ -66,13 +67,6 @@ Streamlit Dashboard
 (Optional) Slack Notification
 
 ```
-n8n / Make (Schedule)
-    → Google Ads API (keyword report)
-    → POST /webhook/run
-    → Agent analyzes + saves snapshot
-    → Dashboard shows last run
-    → (optional) Slack webhook notification
-```
 
 ## Features
 
@@ -86,7 +80,7 @@ n8n / Make (Schedule)
 ## Quick start
 
 ```bash
-git clone https://github.com/YOUR_USER/google-ads-ai-agent.git
+git clone https://github.com/Tushkx/ai-agent-google-ads.git
 cd google-ads-ai-agent
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
