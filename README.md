@@ -1,14 +1,16 @@
 # Google Ads AI Agent
 
-An autonomous AI-powered Google Ads optimization agent that continuously monitors campaign performance, identifies optimization opportunities, recommends scaling or pausing campaigns, and provides a complete decision log for human review.
+An AI-powered Google Ads optimization agent that automatically analyzes campaign performance, detects optimization opportunities, and generates actionable recommendations while keeping humans in control of the final decision.
 
-> **Status:** Portfolio project demonstrating AI-powered marketing automation using Python, FastAPI, Streamlit, n8n and Google Ads data.
+> **Status:** Personal portfolio project showcasing AI-powered marketing automation built with Python, FastAPI, Streamlit, n8n and Google Ads data.
 
 ---
 
 ## Overview
 
-**Business value:** Reduces repetitive manual campaign reviews by automatically identifying optimization opportunities while keeping the final decision under human control.
+**Business value:** Eliminates repetitive campaign reviews by automatically identifying optimization opportunities, reducing manual work while preserving human oversight.
+
+This project demonstrates how AI can augment marketing operations by continuously monitoring campaigns and surfacing actionable recommendations instead of replacing human decision-making.
 
 Instead of manually reviewing Google Ads campaigns every day, this agent automatically:
 
@@ -69,6 +71,15 @@ Streamlit Dashboard
 (Optional) Slack Notification
 
 ```
+## Tech Stack
+
+- Python
+- FastAPI
+- Streamlit
+- n8n
+- Google Ads API
+- Docker
+- Slack Webhooks
 
 ## Features
 
@@ -83,7 +94,7 @@ Streamlit Dashboard
 
 ```bash
 git clone https://github.com/Tushkx/ai-agent-google-ads.git
-cd google-ads-ai-agent
+cd ai-agent-google-ads
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env   # edit API_KEY, COMPANY_NAME, etc.
@@ -191,7 +202,7 @@ docker compose up --build
 - API: http://localhost:8000
 - Dashboard: http://localhost:8501
 
-## Project structure
+## Other supporting modules
 
 ```
 google-ads-ai-agent/
@@ -212,7 +223,7 @@ google-ads-ai-agent/
 └── data/state/         # Runtime snapshots (gitignored)
 ```
 
-## Agent rules
+## Decision Rules
 
 | Signal | Action |
 |--------|--------|
