@@ -1,0 +1,28 @@
+{
+  "rows": [
+    {
+      "Keyword": "crm software free trial",
+      "Date": "2026-06-01",
+      "Clicks": 42,
+      "Spend": 38.50,
+      "Conversions": 4
+    },
+    {
+      "Keyword": "project management tool",
+      "Date": "2026-06-01",
+      "Clicks": 28,
+      "Spend": 31.20,
+      "Conversions": 2
+    },
+    {
+      "Keyword": "crm software",
+      "Date": "2026-06-01",
+      "Clicks": 55,
+      "Spend": 89.00,
+      "Conversions": 0
+    }
+  ],
+  "daily_budget": 20,
+  "source": "google_ads_api",
+  "send_notifications": true
+}
